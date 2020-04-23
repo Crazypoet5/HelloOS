@@ -117,10 +117,11 @@ section loader vstart=LOADER_BASE_ADDR
         mov eax,0x111
     ;这个是页表地址    
         add eax,PAGE_TABLE_START_ADDR
-    ;让    
+        
+            
         mov [PAGE_DIR_START_ADDR],eax
         mov [PAGE_DIR_START_ADDR+0xc00],eax
-        
+    ;在最后一个页目录表中填上当前页目录表的地址  
         sub eax ,0x1000
         mov [PAGE_DIR_START_ADDR+4092],eax
        
@@ -153,4 +154,3 @@ section loader vstart=LOADER_BASE_ADDR
        loop creat_page_pro 
     ;创建结束    
        ret
-    rd_disk_m_32:

@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "bitmap.h": "c",
+        "global.h": "c",
+        "memory.h": "c",
+        "assert.h": "c"
+    }
+}
