@@ -27,5 +27,5 @@ struct virtual_addr {
    uint32_t virtual_addr_start;
 };
 void mem_init(void);
-
+void *get_kernel_pages(uint32_t count);
 #endif

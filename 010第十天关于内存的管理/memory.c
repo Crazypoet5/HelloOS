@@ -137,10 +137,6 @@ void mem_pool_init(int total_mem){
    kernel_virtu_addr.virtual_addr_bitmap.btmp_bytes_len = kernel_pool.pool_bitmap.btmp_bytes_len;   
 
       // 用于维护内核堆的虚拟地址,所以要和内核内存池大小一致
-
-
-
-
   //这个就是内存堆的起始地址
   //在低端1MB之外
    kernel_virtu_addr.virtual_addr_start=0xc0100000;  
@@ -333,7 +329,7 @@ void * molloc_page(enum pool_flags pf,int count){
     }
     return vstart;
 }
-void *get_kernel_page(uint32_t count){
+void *get_kernel_pages(uint32_t count){
   void * addr=molloc_page(PF_KERNEL,count);
   if(addr!=NULL){
       memset(addr,0,count*4096);

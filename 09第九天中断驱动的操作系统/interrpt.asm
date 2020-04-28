@@ -110,4 +110,4 @@ interrupt_handel_over:
     pop ss
     pop es
     add esp ,4   ;跳过错误码
-    iret
+    iretd

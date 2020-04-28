@@ -3,6 +3,8 @@
         "bitmap.h": "c",
         "global.h": "c",
         "memory.h": "c",
-        "assert.h": "c"
+        "assert.h": "c",
+        "thread.h": "c",
+        "list.h": "c"
     }
 }
